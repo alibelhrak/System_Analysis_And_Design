@@ -2,13 +2,13 @@
 
 ## AI Study Assistant
 
-The AI Study Assistant is a web application designed to help students manage their courses, assignments, exams, deadlines, study schedules, and course materials in one place.
+The AI Study Assistant is a web application that helps students organize their school work in one place.
 
-The system will also provide AI-based study recommendations based on the student's upcoming deadlines and study progress.
+The system allows students to manage their courses, assignments, exams, deadlines, study schedules, and course materials. It also provides AI-based study recommendations based on the student's deadlines and progress.
 
 ### Main Features
 
-* Create and manage courses.
+* Manage courses.
 * Add and manage assignments, exams, and other tasks.
 * Set deadlines and priorities.
 * View upcoming assignments and deadlines.
@@ -19,24 +19,6 @@ The system will also provide AI-based study recommendations based on the student
 * Get AI-based study recommendations.
 * Update or delete tasks and study plans.
 
-### Project Information
-
-**Project Sponsor:** Grand Valley State University – Student Academic Support Department
-
-**Project Team:** Ali Belhrak
-
-**Project Priority:** High
-
-**Estimated Duration:** 4 months
-
-**Start Date:** January 12, 2027
-
-**Expected Completion:** May 7, 2027
-
-**Estimated Cost:** $10,000
-
 ### Project Proposal
 
-The complete project proposal is available here:
-
-[Project Proposal](docs/Project_Proposal.md)
+The detailed project proposal is available in the `docs` folder.
