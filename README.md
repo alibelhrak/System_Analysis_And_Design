@@ -21,4 +21,4 @@ The system allows students to manage their courses, assignments, exams, deadline
 
 ### Project Proposal
 
-The detailed project proposal is available in the `docs` folder.
+The detailed project proposal is available in the pdf document folder.
