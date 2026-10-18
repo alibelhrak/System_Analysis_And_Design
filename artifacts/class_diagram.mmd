@@ -1,0 +1,74 @@
+classDiagram
+direction TB
+class Student {
+  -id: String
+  -name: String
+  -email: String
+  +addCourse(course) void
+  +getUpcomingDeadlines() List~Task~
+}
+class Course {
+  -code: String
+  -name: String
+  -weeklyGoalHours: double
+  +addTask(task) void
+  +addMaterial(material) void
+  +getProgress() double
+}
+class Task {
+  -title: String
+  -type: TaskType
+  -dueDate: Date
+  -priority: Priority
+  -hoursNeeded: double
+  -done: boolean
+  +markDone() void
+  +daysUntilDue() int
+}
+class Material {
+  -name: String
+  -kind: String
+  -addedOn: Date
+}
+class StudySchedule {
+  +addSession(session) void
+  +getWeek(start) List~StudySession~
+}
+class StudySession {
+  -date: Date
+  -startTime: Time
+  -hours: double
+  -done: boolean
+  +markDone() void
+}
+class StudyLog {
+  -date: Date
+  -hours: double
+}
+class Reminder {
+  -message: String
+  -remindAt: Date
+}
+class RecommendationEngine {
+  +generate(student) List~Recommendation~
+}
+class Recommendation {
+  -message: String
+  -reason: String
+  -gapHours: double
+  -status: RecStatus
+  +accept(schedule) void
+  +dismiss() void
+}
+Student "1" -- "0..*" Course : creates
+Student "1" -- "1" StudySchedule : owns
+Course "1" -- "0..*" Task : contains
+Course "1" -- "0..*" Material : has
+Course "1" -- "0..*" StudyLog : records
+StudySchedule "1" -- "0..*" StudySession : contains
+StudySession "0..*" -- "1" Course : for
+Task "1" -- "0..*" Reminder : triggers
+RecommendationEngine ..> Student : analyzes
+RecommendationEngine ..> Recommendation : creates
+Recommendation "0..*" -- "1" Task : about
+Recommendation "1" -- "1..*" StudySession : proposes
